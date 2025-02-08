@@ -138,4 +138,99 @@ sum = sum*i;
 }
 console.log("Факториал равен: ",sum)
 */
+// Massive zadachki
+/*
+let a = [42, 12, 5, 211, 87, 24, 63];
+let min = 10000000000;
+let max = 0;
+
+for(let i = 0; i<a.length; i++){
+    if (a[i]<min){
+        min = a[i];
+    }
+    if (a[i]>max){
+        max = a[i];
+    }
+    if (a[i]%2==0){
+        a[i]*=2;
+    }
+}
+console.log(min, max);
+for(let i = 0; i<a.length; i++){
+    console.log(a[i]);
+}
+
+
+a=[];
+b=[]; //Длина массива выбирается случайным образом от 5 до 10
+c=[];
+
+// Массивы заполняются случайными числами от 1 до 100
+// Нужно вывести массив "c", с суммой i элемента массива
+
+let l = Math.floor(Math.random()*(10-5+1))+5; //Длина массивов //Math.floor(Math.random()*(max-min+1))+min
+
+for(let i = 0; i<l; i++){
+    a[i]=(Math.floor(Math.random()*100)+1);
+    b[i]=(Math.floor(Math.random()*100)+1);
+    c[i]=a[i]+b[i];
+}
+
+console.log(a);
+console.log(b);
+console.log(c)
+*/
+
+/*
+//11. В заданном одномерном  массиве, состоящем из n  целых чисел, 
+//  подсчитать количество четных элементов. 
+*/
+/*
+let a=[];
+let k=0
+let n=prompt("Введите колчиество чисел",5);
+
+for(let i=0; i<n;i++){
+    a[i]=(Math.floor(Math.random()*(100-(-100)+1))-100);
+    if (a[i]%2==0 && a[i]>0){
+        k++
+    }
+}
+console.log(a);
+console.log(k);
+*/
+
+
+//код для изменения цвета фона
+/*
+let color_array=["yellow","pink", "red", "green"];
+k=0
+function color_(){
+   document.body.style.backgroundColor = color_array[k];
+   k++;
+}
+*/
+
+
+//код для добавления элементов li на страницу
+/*
+let a=[1, 500, 42,45,566, 5343,4343, "Hello world!"];
+
+let listElement = document.getElementById("numberList");
+
+for (let i=0; i<a.length;i++){
+   let listItem = document.createElement("li");
+   listItem.textContent=a[i]
+   listElement.appendChild(listItem)
+}
+*/
+/*
+//перебор всех тегов p на сайте и вывод текстового контента послднего тега
+/*
+let title = document.querySelectorAll("p");
+
+a=[4,56,7,8]//длина - 4, а номер последнего элемента 4-1
+
+console.log(title[title.length-1].textContent)
+*/
 
