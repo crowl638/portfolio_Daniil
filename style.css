@@ -55,7 +55,7 @@ body{
             border-radius: 15px;
         }
         button:hover{
-            background-color: gray;
+            background-color: white;
         }
         .titlediv img{
             align-self: center;
@@ -129,10 +129,10 @@ nav{
         font-size: 1em;
     }
     .cards button:hover{
-        background-color: #967864;
+        background-color: #b89782;
     }
     .cards button:active{   
-        background-color: rgb(97, 97, 97);
+        background-color: rgb(169, 140, 110);
     
     }
 

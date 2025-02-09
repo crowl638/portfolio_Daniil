@@ -234,14 +234,46 @@ a=[4,56,7,8]//длина - 4, а номер последнего элемент�
 console.log(title[title.length-1].textContent)
 */
 
-
-let color_array=["yellow","pink", "red", "green"];
+//Кнопка меняет цвет фона на сайте
+/*
+let color_array=["yellow","pink", "red", "green", "black"];
 k=0
-function color_(){
+function col(){
    document.body.style.backgroundColor = color_array[k];
-   k++;}
-
-if (k>color_array.length-1){
+   k++;
+   if (k>color_array.length-1){
     k=0
 }
-document.getElementsByClassName(col)=col;
+}
+*/
+
+let image = ["img/slider.def.png",
+             "img/slider1.2.jpg",
+             "img/slider1.3.jpg"]
+
+let slide = document.getElementById("slider-img")
+let index=0
+
+function next_img(){
+    
+    index++;
+    if (index>=image.length){
+        index=0
+    }
+    slide.src = image[index];
+}
+
+function prev_img(){
+    index--;
+    if (index<0){
+        index=image.length-1;
+
+    }
+    slide.src = image[index];
+}
+
+function auto_slide(){
+    next_img();
+}
+
+setInterval(auto_slide,3000)
