@@ -234,3 +234,14 @@ a=[4,56,7,8]//длина - 4, а номер последнего элемент�
 console.log(title[title.length-1].textContent)
 */
 
+
+let color_array=["yellow","pink", "red", "green"];
+k=0
+function color_(){
+   document.body.style.backgroundColor = color_array[k];
+   k++;}
+
+if (k>color_array.length-1){
+    k=0
+}
+document.getElementsByClassName(col)=col;
