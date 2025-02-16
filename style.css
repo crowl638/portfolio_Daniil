@@ -3,82 +3,88 @@
 
 
 
-body{
+body {
     background: #d8c9bd;
     font-family: Montserrat;
 }
 
-        p{
-            --fsize:1.5em;
-            font-size: var(--fsize);
-            font-style: normal;
-            font-family: Montserrat;
-        }
+p {
+    --fsize: 1.5em;
+    font-size: var(--fsize);
+    font-style: normal;
+    font-family: Montserrat;
+}
 
-        .title{
-            background-color: transparent;
-            display: flex;
-            max-width: 100%;
-            justify-content: center;
-            padding: 50px;
-        }
-        h3{
-            text-align: center;
-            font-size: 2em; 
-        }
-        h1{
-            text-align: center;
-            font-size: 4em;
-        }
+.title {
+    background-color: transparent;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    padding: 50px;
+}
 
-        .titlediv{
-            background-color: whitesmoke;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-radius: 20px;
-            padding: 5px 15px;
-        }
-        .titlediv p{
-            text-align: center;
-        }
-        .titlediv button{
-            height: 1em;
-            
-            width: fit-content;
-            align-self: center;
-            margin-top: 10px;
-            padding: 0px 40px;
-            background-color: #238898;
-            border: none;
-            border-radius: 15px;
-        }
-        button:hover{
-            background-color: white;
-        }
-        .titlediv img{
-            align-self: center;
-        }
+h3 {
+    text-align: center;
+    font-size: 2em;
+}
 
-        header{
-            height: 70px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 40px;
-            width: 100%;
-            background-color: #7f6757;
-        }
+h1 {
+    text-align: center;
+    font-size: 4em;
+}
 
-nav{
+.titlediv {
+    background-color: whitesmoke;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.titlediv p {
+    text-align: center;
+}
+
+.titlediv button {
+    height: 1em;
+
+    width: fit-content;
+    align-self: center;
+    margin-top: 10px;
+    padding: 0px 40px;
+    background-color: #238898;
+    border: none;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.titlediv img {
+    align-self: center;
+}
+
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px;
+    width: 100%;
+    background-color: #7f6757;
+}
+
+nav {
     display: flex;
     justify-content: center;
     min-height: 100%;
     align-items: center;
 }
 
-.hlink{
+.hlink {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -89,15 +95,18 @@ nav{
     box-shadow: 6px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
 }
-.cardscontainer{
+
+.cardscontainer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.cardscontainer img{
+
+.cardscontainer img {
     max-height: 10em;
 }
-.cards{
+
+.cards {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,31 +121,36 @@ nav{
     background-color: #c6b29f;
     box-shadow: 10px 10px 15px 1px rgba(0, 0, 0, 0.2);
 }
-.cards img{
+
+.cards img {
     min-width: 100%;
 }
-.cards p{
+
+.cards p {
     margin: 0;
 }
-.cards button{
-        background-color: transparent;
-        border: 1px solid black;
-        border-radius: 10px;
-        
-        margin: 10px;
-        box-shadow: 6px 4px 8px 0px rgba(34, 60, 80, 0.2);
-        padding: 0.8em;
-        font-size: 1em;
-    }
-    .cards button:hover{
-        background-color: #b89782;
-    }
-    .cards button:active{   
-        background-color: rgb(169, 140, 110);
-    
-    }
 
-footer{
+.cards button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    margin: 10px;
+    box-shadow: 6px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    padding: 0.8em;
+    font-size: 1em;
+}
+
+.cards button:hover {
+    background-color: #b89782;
+}
+
+.cards button:active {
+    background-color: rgb(169, 140, 110);
+
+}
+
+footer {
     background-color: #715a4b;
     display: flex;
     justify-content: space-between;
@@ -145,43 +159,47 @@ footer{
     margin: 10px;
     border-radius: 10px;
 }
-.footerlink{
+
+.footerlink {
     display: flex;
     width: 100%;
     height: auto;
     text-decoration: none;
-    
+
 }
 
-.footerlink:hover{
+.footerlink:hover {
     text-decoration: underline;
 }
-footer a{
+
+footer a {
     color: whitesmoke;
     font-size: 1.5em;
 }
 
-.form_section{
+.form_section {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
 
-.form_container{
-    width:fit-content;
+.form_container {
+    width: fit-content;
     border: 2px solid black;
     border-radius: 13px;
     padding: 25px 50px;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
 }
 
-form p{
+form p {
     margin: 0;
 }
-input[required]{
+
+input[required] {
     margin-bottom: 15px;
     width: 350px;
     height: 35px;
@@ -190,21 +208,24 @@ input[required]{
     padding: 0 15px;
     font-size: 1em;
 }
-input[required]:focus{
+
+input[required]:focus {
     animation-name: form_input;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
-fieldset{
+
+fieldset {
     border: none;
     font-size: 1.5em;
     margin-left: -17px;
 }
-form button{
+
+form button {
     background-color: transparent;
     border: 1px solid black;
     border-radius: 10px;
-    
+
     margin: 10px;
     box-shadow: 6px 4px 8px 0px rgba(34, 60, 80, 0.2);
     padding: 0.8em;
@@ -217,11 +238,29 @@ form button{
 
 
 
-@keyframes form_input{
-    from{
+@keyframes form_input {
+    from {
         border: 1px solid;
     }
-    to{
+
+    to {
         border: 3px solid;
     }
+}
+
+#run_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+#circle{
+    width: 30px;
+    height: 30px;
+    background-color: #a4a3a2;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.1s;
 }

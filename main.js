@@ -1,3 +1,60 @@
+let image = ["img/slider.def.png",
+    "img/slider1.2.jpg",
+    "img/slider1.3.jpg"]
+
+let slide = document.getElementById("slider-img")
+let index=0
+
+function next_img(){
+
+index++;
+if (index>=image.length){
+index=0
+}
+slide.src = image[index];
+}
+
+function prev_img(){
+index--;
+if (index<0){
+index=image.length-1;
+
+}
+slide.src = image[index];
+}
+
+function auto_slide(){
+next_img();
+}
+
+setInterval(auto_slide,3000);
+
+
+
+let runBtn = document.getElementById("run_button");
+
+runBtn.addEventListener("mouseover", function(){
+    let x = Math.random()*(window.innerWidth-100);
+    let y = Math.random()*(window.innerHeight-50);
+    runBtn.style.left= `${x}px`;
+    runBtn.style.top= `${y}px`;
+})
+
+
+let crcl= document.getElementById(circle);
+
+crcl.addEventListener("mousemove", function(event){
+    crcl.style.transform = `translate(${event.clientX}px, ${event.clientY})`;
+})
+
+
+
+
+
+
+
+
+
 //let a = document.getElementsByClassName("hlink");
 
 /*console.log(a);
@@ -247,33 +304,7 @@ function col(){
 }
 */
 
-let image = ["img/slider.def.png",
-             "img/slider1.2.jpg",
-             "img/slider1.3.jpg"]
 
-let slide = document.getElementById("slider-img")
-let index=0
 
-function next_img(){
-    
-    index++;
-    if (index>=image.length){
-        index=0
-    }
-    slide.src = image[index];
-}
 
-function prev_img(){
-    index--;
-    if (index<0){
-        index=image.length-1;
 
-    }
-    slide.src = image[index];
-}
-
-function auto_slide(){
-    next_img();
-}
-
-setInterval(auto_slide,3000)
