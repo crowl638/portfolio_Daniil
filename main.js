@@ -31,6 +31,8 @@ setInterval(auto_slide,3000);
 
 
 
+
+
 let runBtn = document.getElementById("run_button");
 
 runBtn.addEventListener("mouseover", function(){
@@ -41,16 +43,48 @@ runBtn.addEventListener("mouseover", function(){
 })
 
 
+
+
+let scrollToTopBtn = document.getElementById("scrollToTop");
+
+// Отслеживаем прокрутку страницы
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) { // Если прокрутили 300px вниз
+        scrollToTopBtn.classList.add("show");
+    } else {
+        scrollToTopBtn.classList.remove("show");
+    }
+});
+
+// Добавляем клик для возврата наверх
+scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Плавная прокрутка
+    });
+});
+
+
+
+
+document.querySelector('.smart-button').addEventListener('click', function() {
+    this.classList.add('clicked');
+    
+    setTimeout(() => {
+      this.classList.remove('clicked');
+    }, 3000);
+  });
+
+
+
+
+/*
 let crcl= document.getElementById(circle);
-
-crcl.addEventListener("mousemove", function(event){
-    crcl.style.transform = `translate(${event.clientX}px, ${event.clientY})`;
-})
-
-
-
-
-
+document.addEventListener("mousemove", function(event) {
+    crcl.style.left = ${event.pageX-15}px;
+    crcl.style.top = ${event.pageY-15}px;
+});
+*/
 
 
 
@@ -292,7 +326,7 @@ console.log(title[title.length-1].textContent)
 */
 
 //Кнопка меняет цвет фона на сайте
-/*
+
 let color_array=["yellow","pink", "red", "green", "black"];
 k=0
 function col(){
@@ -302,7 +336,7 @@ function col(){
     k=0
 }
 }
-*/
+
 
 
 
