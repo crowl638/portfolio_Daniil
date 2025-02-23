@@ -41,6 +41,7 @@ h1 {
     justify-content: center;
     border-radius: 20px;
     padding: 5px 15px;
+
 }
 
 .titlediv p {
@@ -70,7 +71,7 @@ button:hover {
 header {
     height: 5em;
     display: flex;
-    justify-content: space-around;
+    justify-content: center  ;
     align-items: center;
     margin-top: 40px;
     width: 100%;
@@ -79,7 +80,6 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    min-height: 100%;
     align-items: center;
 }
 
@@ -90,7 +90,6 @@ nav {
     background-color: #e1e1ff;
     padding: 10px;
     border-radius: 10px;
-    margin-left: 15px;
     box-shadow: 6px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
 }
@@ -267,6 +266,7 @@ form button {
     border-radius: 50%;
     position: absolute;
     transition: transform 0.1s;
+    filter: blur(5px);
 }
 
 
@@ -315,3 +315,51 @@ form button {
   .smart-button.clicked {
     transform: scale(0.9);
   }
+
+
+  .nav_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+  @media screen  and (max-width:767px){
+    .nav_menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+
+    .nav_menu.active{
+        display: flex;
+    }
+
+    .burger{
+        display: block;
+    }
+    .hlink{
+        box-sizing: border-box;
+        width: 100%;
+        border-radius: 0;
+        padding: 10px 15px;
+    }
+    .titlediv{
+        width: 80%;
+    }
+    .title{
+        width: 100%;
+    }
+    .cards{
+        width: 100%;
+    }
+  }
+

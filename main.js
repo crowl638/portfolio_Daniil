@@ -77,12 +77,27 @@ document.querySelector('.smart-button').addEventListener('click', function() {
 
 
 
+let burger = document.getElementById("burger");
+let menu = document.querySelector(".nav_menu");
+burger.addEventListener("click", ()=>{
+    menu.classList.toggle("active");
+    console.log("yes")
+})
+
+document.addEventListener("click", (event)=>{
+    if (!event.target.closest("header")){
+        menu.classList.remove("active");
+    }
+
+})
+
 
 /*
-let crcl= document.getElementById(circle);
+let crcl= document.getElementById("circle");
 document.addEventListener("mousemove", function(event) {
-    crcl.style.left = ${event.pageX-15}px;
-    crcl.style.top = ${event.pageY-15}px;
+
+    crcl.style.left = `${event.pageX-15}px`;
+    crcl.style.top = `${event.pageY-15}px`;
 });
 */
 
