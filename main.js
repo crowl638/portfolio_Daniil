@@ -91,6 +91,26 @@ document.addEventListener("click", (event)=>{
 
 })
 
+let menuHeight = menu.scrollHeight;
+console.log(menuHeight)
+
+
+document.querySelector(".content_active") = cont_act;
+document.querySelector(".content") = cont_def;
+
+document.addEventListener("click", (event)=>{
+    if (menu.classList.contains("active")) {
+        content.style.marginTop = menuHeight + "px";
+        //дальше здесь пишешь значение для закрытия окна (обнуление высоты меню и верхнего отступа у контента) 
+        }
+        else{
+            cont_act;
+        //здесь - для открытия окна}
+        }
+        
+})
+
+
 
 /*
 let crcl= document.getElementById("circle");

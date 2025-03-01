@@ -363,3 +363,13 @@ form button {
     }
   }
 
+.content_def{
+    height: 0;
+    margin-top: 0;
+}
+
+.content{
+    height: auto;
+}
+
+
