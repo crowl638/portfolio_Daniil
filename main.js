@@ -3,31 +3,31 @@ let image = ["img/slider.def.png",
     "img/slider1.3.jpg"]
 
 let slide = document.getElementById("slider-img")
-let index=0
+let index = 0
 
-function next_img(){
+function next_img() {
 
-index++;
-if (index>=image.length){
-index=0
-}
-slide.src = image[index];
-}
-
-function prev_img(){
-index--;
-if (index<0){
-index=image.length-1;
-
-}
-slide.src = image[index];
+    index++;
+    if (index >= image.length) {
+        index = 0
+    }
+    slide.src = image[index];
 }
 
-function auto_slide(){
-next_img();
+function prev_img() {
+    index--;
+    if (index < 0) {
+        index = image.length - 1;
+
+    }
+    slide.src = image[index];
 }
 
-setInterval(auto_slide,3000);
+function auto_slide() {
+    next_img();
+}
+
+setInterval(auto_slide, 3000);
 
 
 
@@ -35,11 +35,11 @@ setInterval(auto_slide,3000);
 
 let runBtn = document.getElementById("run_button");
 
-runBtn.addEventListener("mouseover", function(){
-    let x = Math.random()*(window.innerWidth-100);
-    let y = Math.random()*(window.innerHeight-50);
-    runBtn.style.left= `${x}px`;
-    runBtn.style.top= `${y}px`;
+runBtn.addEventListener("mouseover", function () {
+    let x = Math.random() * (window.innerWidth - 100);
+    let y = Math.random() * (window.innerHeight - 50);
+    runBtn.style.left = `${x}px`;
+    runBtn.style.top = `${y}px`;
 })
 
 
@@ -67,48 +67,81 @@ scrollToTopBtn.addEventListener("click", function () {
 
 
 
-document.querySelector('.smart-button').addEventListener('click', function() {
+document.querySelector('.smart-button').addEventListener('click', function () {
     this.classList.add('clicked');
-    
+
     setTimeout(() => {
-      this.classList.remove('clicked');
+        this.classList.remove('clicked');
     }, 3000);
-  });
+});
 
 
 
-let burger = document.getElementById("burger");
-let menu = document.querySelector(".nav_menu");
-burger.addEventListener("click", ()=>{
+/*burger.addEventListener("click", ()=>{
     menu.classList.toggle("active");
     console.log("yes")
 })
-
-document.addEventListener("click", (event)=>{
-    if (!event.target.closest("header")){
+*/
+document.addEventListener("click", (event) => {
+    if (!event.target.closest("header")) {
         menu.classList.remove("active");
     }
 
 })
 
-let menuHeight = menu.scrollHeight;
-console.log(menuHeight)
 
 
-document.querySelector(".content_active") = cont_act;
-document.querySelector(".content") = cont_def;
 
-document.addEventListener("click", (event)=>{
+
+
+let burger = document.getElementById("burger");
+let menu = document.querySelector(".nav_menu");
+let content = document.querySelector(".content1");
+
+burger.addEventListener("click", ()=> {
     if (menu.classList.contains("active")) {
-        content.style.marginTop = menuHeight + "px";
+        menu.style.height = "0px";
+        content.style.marginTop = "0px";
+        console.log("1");
         //дальше здесь пишешь значение для закрытия окна (обнуление высоты меню и верхнего отступа у контента) 
-        }
-        else{
-            cont_act;
+    }
+    else {
+        menu.style.height = menu.scrollHeight + "px";
+        content.style.marginTop = menu.scrollHeight + "px";
         //здесь - для открытия окна}
-        }
-        
+        console.log("2");
+    }
+    menu.classList.toggle("active");
+    console.log("0");
+
 })
+
+
+
+let modal = document.querySelector(".modal");
+let modal_cont = document.querySelector(".modal-content"); 
+let close = document.querySelector(".close");
+let isModal = false;
+
+
+window.addEventListener("mousemove", (event)=>{
+    if (event.clientY <= 1 && !isModal){
+        modal.style.display = "flex";
+        isModal = true;
+        document.body.style.overflowY = "hidden";
+    }
+})
+
+modal.addEventListener("click", ()=>{
+    modal.style.display = "none";
+    isModal = false;
+    document.body.style.overflowY = "visible";
+})
+
+modal_cont.addEventListener("click", (event)=>{
+    event.stopPropagation();
+})
+
 
 
 
@@ -362,14 +395,14 @@ console.log(title[title.length-1].textContent)
 
 //Кнопка меняет цвет фона на сайте
 
-let color_array=["yellow","pink", "red", "green", "black"];
-k=0
-function col(){
-   document.body.style.backgroundColor = color_array[k];
-   k++;
-   if (k>color_array.length-1){
-    k=0
-}
+let color_array = ["yellow", "pink", "red", "green", "black"];
+k = 0
+function col() {
+    document.body.style.backgroundColor = color_array[k];
+    k++;
+    if (k > color_array.length - 1) {
+        k = 0
+    }
 }
 
 
