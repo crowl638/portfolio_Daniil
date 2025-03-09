@@ -115,8 +115,9 @@ burger.addEventListener("click", () => {
     console.log("0");
 
 })
-
-
+let modal_card = document.querySelector(".modal-card");
+let modal_cont_card = document.querySelector(".modal-content-card");
+let modal_btn = document.querySelector(".modal-btn");
 
 let modal = document.querySelector(".modal");
 let modal_cont = document.querySelector(".modal-content");
@@ -124,12 +125,12 @@ let close = document.querySelector(".close");
 let isModal = false;
 
 
-window.addEventListener("mousemove", (event) => {
-    if (event.clientY <= 1 && !isModal) {
+modal_btn.addEventListener("click", () => {
+   
         modal.style.display = "flex";
         isModal = true;
         document.body.style.overflowY = "hidden";
-    }
+    
 })
 
 modal.addEventListener("click", () => {
@@ -144,9 +145,6 @@ modal_cont.addEventListener("click", (event) => {
 
 
 
-let modal_card = document.querySelector(".modal-card");
-let modal_cont_card = document.querySelector(".modal-content-card");
-let modal_btn = document.querySelector("modal-btn");
 
 modal_btn.addEventListener("click", (event) => {
     if (event.type) {
