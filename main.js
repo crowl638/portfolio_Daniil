@@ -98,7 +98,7 @@ let burger = document.getElementById("burger");
 let menu = document.querySelector(".nav_menu");
 let content = document.querySelector(".content1");
 
-burger.addEventListener("click", ()=> {
+burger.addEventListener("click", () => {
     if (menu.classList.contains("active")) {
         menu.style.height = "0px";
         content.style.marginTop = "0px";
@@ -119,29 +119,48 @@ burger.addEventListener("click", ()=> {
 
 
 let modal = document.querySelector(".modal");
-let modal_cont = document.querySelector(".modal-content"); 
+let modal_cont = document.querySelector(".modal-content");
 let close = document.querySelector(".close");
 let isModal = false;
 
 
-window.addEventListener("mousemove", (event)=>{
-    if (event.clientY <= 1 && !isModal){
+window.addEventListener("mousemove", (event) => {
+    if (event.clientY <= 1 && !isModal) {
         modal.style.display = "flex";
         isModal = true;
         document.body.style.overflowY = "hidden";
     }
 })
 
-modal.addEventListener("click", ()=>{
+modal.addEventListener("click", () => {
     modal.style.display = "none";
     isModal = false;
     document.body.style.overflowY = "visible";
 })
 
-modal_cont.addEventListener("click", (event)=>{
+modal_cont.addEventListener("click", (event) => {
     event.stopPropagation();
 })
 
+
+
+let modal_card = document.querySelector(".modal-card");
+let modal_cont_card = document.querySelector(".modal-content-card");
+let modal_btn = document.querySelector("modal-btn");
+
+modal_btn.addEventListener("click", (event) => {
+    if (event.type) {
+        modal_card.style.display = "flex";
+        document.body.style.overflowY = "visible"
+
+    }
+
+});
+
+
+let photo_games = ["img/mario.avif",
+    "img/flappy_bird.webp",
+    "img/sonic.png"]
 
 
 

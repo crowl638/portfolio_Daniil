@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />  
+    <link rel="stylesheet" href="style.css" />
     <title>Даниил</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" as="fonts">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" as="fonts">
 </head>
+
 <body>
     <header>
         <nav class="nav_menu">
-            
+
             <a class="hlink" href="https://google.com/">Главная</a></li>
             <a class="hlink" href="https://google.com/">О нас</a></li>
             <a class="hlink" href="https://google.com/">Галерея</a></li>
@@ -26,9 +29,11 @@
         <button onclick="col()">color</button>
         <section class="title">
             <div class="titlediv">
-                <h1>Даниил Бухаров</h1> 
+                <h1>Даниил Бухаров</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam praesentium recusandae ut vel dicta quo modi deserunt alias similique non assumenda asperiores quibusdam sit cum dignissimos dolores, animi quas sunt?   
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam praesentium recusandae ut vel dicta
+                    quo modi deserunt alias similique non assumenda asperiores quibusdam sit cum dignissimos dolores,
+                    animi quas sunt?
                 </p>
                 <button id="run_button">Привет!</button>
             </div>
@@ -43,16 +48,18 @@
             <div class="cardscontainer">
                 <div class="cards">
                     <div class="slider-div">
-                    <img id="slider-img" src="img\slider.def.png" width="100px">
+                        <img id="slider-img" src="img\slider.def.png" width="100px">
                     </div>
                     <div class="slider-button">
-                    <button onclick="prev_img()">&#129104;</button>
-                    <button onclick="next_img()">&#129106;</button>
+                        <button onclick="prev_img()">&#129104;</button>
+                        <button onclick="next_img()">&#129106;</button>
                     </div>
 
                     <h3>Мой проект</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta nesciunt explicabo fuga beatae atque ullam iusto cum praesentium quidem. Veritatis inventore soluta quos corporis minus libero dolor illum sapiente.</p>
-                    <button>Подробнее</button>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta nesciunt explicabo fuga
+                        beatae atque ullam iusto cum praesentium quidem. Veritatis inventore soluta quos corporis minus
+                        libero dolor illum sapiente.</p>
+                    <button class="modal-btn">Подробнее</button>
                 </div>
                 <div class="cards">
                     <img src="img\slider.def.png" width="100px">
@@ -71,7 +78,7 @@
                     <h3>Мой проект</h3>
                     <p>Проект по созданию игры на Python</p>
                     <button>Подробнее</button>
-                </div>  
+                </div>
                 <div class="cards">
                     <img src="img\slider.def.png" width="100px">
                     <h3>Мой проект</h3>
@@ -104,7 +111,7 @@
                         <p>Сколько вам лет?</p>
                         <input placeholder="20" type="number" min="3" max="99" required>
                     </label>
-                    
+
 
                     <fieldset>
                         <legend>Как с вами можно связаться?</legend>
@@ -116,13 +123,13 @@
                             <input type="radio" value="WA" name="connect">
                             <label for="WA">WhatsApp</label>
                         </div>
-                        <div>   
+                        <div>
                             <input type="radio" value="E-mail" name="connect">
                             <label for="E-mail">E-mail</label>
                         </div>
-                </fieldset>
-                    
-    
+                    </fieldset>
+
+
                     <button type="submit" class="submit_button">Отправить</button>
                 </form>
             </div>
@@ -131,44 +138,58 @@
     <div class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+            <div class="modal-text">
+                <h3>Карточка игры</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quisquam repellendus eum
+                    laudantium harum hic saepe ex obcaecati, fugit praesentium at, quia ea. Excepturi sunt molestiae eos
+                    voluptas a odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex ullam quisquam,
+                    sunt assumenda consequatur itaque aut, nemo cum error nihil natus ab quae amet qui. Placeat at
+                    corrupti odio.</p>
+            </div>
+            <img class="modal-img" src="img\mario.avif" alt="mario">
+            <img class="githubich" src="img\githubich.png" alt="icon.github">
+        </div>
+    </div>
+    <div class="modal-card">
+        <div class="modal-content-card">
+            <span class="close">&times;</span>
             <p>Это модальное окно</p>
         </div>
     </div>
+    <footer>
+        <div>
+            <h2>Даниил Бухаров</h2>
+            <a class="footerlink" href="tel+79253434166">+7(925)343-41-66</a>
+            <br>
+            <a class="footerlink" href="mailto:bukharovdaniil638@gmail.com">bukharovdaniil638@gmail.com</a>
+        </div>
+        <div>
+            <a class="footerlink" href="google.com">Навыки</a>
+            <a class="footerlink" href="google.com">Проекты</a>
+            <a class="footerlink" href="google.com">Образование</a>
+            <a class="footerlink" href="google.com">Обратная связь</a>
 
-        <footer>
-           <div>
-                <h2>Даниил Бухаров</h2>
-                <a class="footerlink" href="tel+79253434166">+7(925)343-41-66</a>
-                <br>
-                <a class="footerlink" href="mailto:bukharovdaniil638@gmail.com">bukharovdaniil638@gmail.com</a>
-            </div>
-            <div>
-                <a class="footerlink" href="google.com">Навыки</a>
-                <a class="footerlink" href="google.com">Проекты</a>
-                <a class="footerlink" href="google.com">Образование</a>
-                <a class="footerlink" href="google.com">Обратная связь</a>
 
+        </div>
 
-            </div>
-
-            <div>
-                <a href="youtube.com"><img src="img\youtube.sss-Photoroom.png"></a>
-                <a href="VK.com"><img src="img\vk.sss-Photoroom.png"></a>
-                <a href="instagram.com"><img src="img\images-Photoroom.png"></a>
-            </div>
-        </footer>
-      
-      
-      
-      
+        <div>
+            <a href="youtube.com"><img src="img\youtube.sss-Photoroom.png"></a>
+            <a href="VK.com"><img src="img\vk.sss-Photoroom.png"></a>
+            <a href="instagram.com"><img src="img\images-Photoroom.png"></a>
+        </div>
+    </footer>
 
 
 
-      
-      
-      
-      
-        <!--<section class="title">
+
+
+
+
+
+
+
+
+    <!--<section class="title">
             <h2>Виды мячей:</h2>
             <div class="titlediv">
                 <img class=".img" src="first_project__crowl638\img\basketball_ball.jpg" alt="Баскетбольный мяч">
@@ -197,10 +218,11 @@
         </section> -->
 
 
-                
-   
+
+
 
 
 </body>
 <script src="main.js"></script>
+
 </html>
