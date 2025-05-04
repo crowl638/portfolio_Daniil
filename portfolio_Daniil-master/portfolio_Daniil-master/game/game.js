@@ -1,23 +1,14 @@
 let canvas = document.getElementById("gameCanvas");
 let ctx = canvas.getContext("2d")
 
-function resizeCanvas() {
-    canvas.width = Math.min(800, window.innerWidth * 0.9);
-    canvas.height = Math.min(500, window.innerHeight * 0.7);
-}
-
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
-
-const paddleHeight = 10, ballRadius = 8;
-let paddleWidth = canvas.width * 0.2;
+const paddleWidth = 80, paddleHeight = 10, ballRadius = 8;
 
 let paddleX = (canvas.width - paddleWidth)/2;
 let ballX = canvas.width/2;
 let ballY = canvas.height/2;
 
-let ballSpeedX = 10;
-let ballSpeedY = -10;
+let ballSpeedX = 3;
+let ballSpeedY = -3;
 
 let rightPressed = false, leftPressed = false;
 
@@ -63,9 +54,9 @@ function draw(){
     drawPaddle();
     drawBall();
 
-    if (rightPressed && paddleX < canvas.width-paddleWidth) paddleX += 10;
+    if (rightPressed && paddleX < canvas.width-paddleWidth) paddleX += 5;
 
-    if (leftPressed && paddleX>0) paddleX -= 10;
+    if (leftPressed && paddleX>0) paddleX -= 5;
 
     ballX+=ballSpeedX;
     ballY+=ballSpeedY;
@@ -76,29 +67,10 @@ function draw(){
 
     if (ballY+ballRadius>canvas.height-paddleHeight-10 && ballX>paddleX && ballX<paddleX+paddleWidth) ballSpeedY = -ballSpeedY
 
-    if (ballY - ballRadius > canvas.height){
-        setTimeout(()=>{
-            alert("Вы проиграли, Начните заново")
-            location.reload();
-
-        }, 100)
-
-        return;
-    }
-
     //alert("Вы проиграли, Начните заново")
     //document.location.reload();
 
-
-    animation = requestAnimationFrame(draw);
-}
-function RestartGame(){
-let paddleX = (canvas.width - paddleWidth)/2;
-let ballX = canvas.width/2;
-let ballY = canvas.height/2;
-let ballSpeedX = 4;
-let ballSpeedY = -4;
-draw();
+    requestAnimationFrame(draw);
 }
 
 draw();
