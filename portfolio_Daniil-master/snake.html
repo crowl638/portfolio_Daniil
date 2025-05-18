@@ -34,49 +34,24 @@
         })
 
         function draw(){
-            ctx.fillStyle = "#123213";
+            ctx.fillstyle = "#f5f5dc";
             ctx.fillRect(0,0,canvas.width,canvas.height);
             
             for (let i=0; i<snake.width;i++){
-                ctx.fillStyle = (i==0) ? "green":"lime";
+                ctx.fillstyle = (i==0) ? "green":"lime";
                 ctx.fillRect(snake[i].x, snake[i].y,box,box);    
             }
 
-            ctx.fillStyle = "red";
+            ctx.fillstyle = "red";
             ctx.fillRect(food.x,food.y,box,box);
 
             let headX = snake[0].x;
             let headY = snake[0].y;
 
-            if (dir==="RIGHT") headX+=box;
-            if (dir==="LEFT") heaxX-=box;
-            if (dir==="UP") headY-=box;
-            if (dir==="DOWN") headY +=box;
-            
-            if (headX === food.x && headY === food.y) {
-            food = {
-                x: Math.floor(Math.random() * (canvas.width / box)) * box,
-                y: Math.floor(Math.random() * (canvas.height / box)) * box
-            };
-        } else {
-            snake.pop(); 
-        }
-
-        let newHead = { x: headX, y: headY };
-
-        snake.unshift(newHead);
-
-        if (headX >= 400 || headY >=400) {
-            clearInterval(game);
-            alert("Game Over");
-        }
-
-        document.addEventListener("keydown", (e) =>{
-            if (e.key === "space"){
-                ctx.fillStyle = "#" + (Math.floor(Math.random()*900000 + 100000));
-            }
-        })
-     
+            if (dir="RIGHT") headX+=box;
+            if (dir="LEFT") heaxX-=box;
+            if (dir="UP") headY-=box;
+            if (dir="DOWN") headY +=box;
 
         }
 

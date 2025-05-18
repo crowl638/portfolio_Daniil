@@ -161,7 +161,6 @@ let photo_games = ["img/mario.avif",
     "img/sonic.png"]
 
 
-
 /*
 let crcl= document.getElementById("circle");
 document.addEventListener("mousemove", function(event) {
@@ -421,6 +420,40 @@ function col() {
         k = 0
     }
 }
+
+let form = document.getElementById("myForm");
+let status1 = document.getElementById("status");
+
+form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+
+    let data={
+        name: form.name.value,
+        tel: form.tel.value,
+
+    };
+
+    try{
+        let res= await fetch("",{
+            method:"POST",
+            mode: "no-cors",
+            body: JSON.stringify(data),
+            headers:{
+                "Content-Type":"application/json"
+
+            }
+        });
+        if (res.ok) {
+            status1.textContent = "Отправлено";
+            form.reset();
+
+        }else{
+            status1.textContent = "Ошибка отправки";
+        }
+    }   catch (err){
+        console.log(err);
+    };
+});
 
 
 

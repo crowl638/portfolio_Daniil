@@ -31,9 +31,7 @@
             <div class="titlediv">
                 <h1>Даниил Бухаров</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam praesentium recusandae ut vel dicta
-                    quo modi deserunt alias similique non assumenda asperiores quibusdam sit cum dignissimos dolores,
-                    animi quas sunt?
+                  Это мой сайт-портфолио со всеми проектами, реализованными с помощью написания кода и креативонстью создателя
                 </p>
                 <button id="run_button">Привет!</button>
             </div>
@@ -56,28 +54,26 @@
                     </div>
 
                     <h3>Мой проект</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt dicta nesciunt explicabo fuga
-                        beatae atque ullam iusto cum praesentium quidem. Veritatis inventore soluta quos corporis minus
-                        libero dolor illum sapiente.</p>
+                    <p>Тестовая карточка для проверки слайдера</p>
                     <button class="modal-btn">Подробнее</button>
                 </div>
                 <div class="cards">
                     <img src="img\slider.def.png" width="100px">
-                    <h3>Мой проект</h3>
+                    <h3>Модель комнаты</h3>
                     <p>Проект по созданию игры на Python</p>
-                    <button>Подробнее</button>
+                    <button onclick="window.location.href='model.html'">Посмотреть модель</button>
                 </div>
                 <div class="cards">
                     <img src="img\slider.def.png" width="100px">
-                    <h3>Мой проект</h3>
-                    <p>Проект по созданию игры на Python</p>
-                    <button>Подробнее</button>
+                    <h3>Змейка</h3>
+                    <p>Проект по созданию игры на Javascript</p>
+                    <button onclick="window.location.href='snake.html'">Играть</button>
                 </div>
                 <div class="cards">
                     <img src="img\slider.def.png" width="100px">
-                    <h3>Мой проект</h3>
-                    <p>Проект по созданию игры на Python</p>
-                    <button>Подробнее</button>
+                    <h3>Арканоид</h3>
+                    <p>Проект по созданию игры на Javascript</p>
+                    <button onclick="window.location.href='game.html'">Играть</button>
                 </div>
                 <div class="cards">
                     <img src="img\slider.def.png" width="100px">
@@ -102,16 +98,25 @@
         <button id="scrollToTop">⬆ Наверх</button>
         <section class="form_section">
             <div class="form_container">
-                <form action="mailto:html@yandex.ru">
+                <form id="myForm">
                     <label>
                         <p>Как вас зовут?</p>
-                        <input type="text" placeholder="Ф.И.О" required>
+                        <input class="f_input" placeholder="Ф.И.О" type="text" name="name" required>
                     </label>
                     <label>
-                        <p>Сколько вам лет?</p>
-                        <input placeholder="20" type="number" min="3" max="99" required>
+                        <p>Ваш номер телефона</p>
+                        <input class="f_input" placeholder="+7(___)___-__" type="tel" name="tel">
                     </label>
 
+                       <label>
+                        <p>Выберите услугу</p>
+                        <select>
+                            <option>Создание сайта</option>
+                            <option>Написание программы</option>
+                            <option>Создание 3D-модели</option>
+                            <option>Другое</option>
+                        </select>
+                    </label>
 
                     <fieldset>
                         <legend>Как с вами можно связаться?</legend>
@@ -132,6 +137,7 @@
 
                     <button type="submit" class="submit_button">Отправить</button>
                 </form>
+                <p id="status"></p>
             </div>
         </section>
     </main>
