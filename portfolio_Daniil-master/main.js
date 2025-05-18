@@ -158,10 +158,10 @@ modal_btn.addEventListener("click", (event) => {
 
 let photo_games = ["img/mario.avif",
     "img/flappy_bird.webp",
-    "img/sonic.png"]
+    "img/sonic.png"];
 
 
-/*
+    /*
 let crcl= document.getElementById("circle");
 document.addEventListener("mousemove", function(event) {
 
@@ -421,38 +421,36 @@ function col() {
     }
 }
 
+
 let form = document.getElementById("myForm");
 let status1 = document.getElementById("status");
 
-form.addEventListener("submit", async (e)=>{
-    e.preventDefault();
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    let data={
-        name: form.name.value,
-        tel: form.tel.value,
+  const data = {
+    name: form.name.value,
+    tel: form.tel.value,
+    service: form.service.value,
+    connect: form.connect.value
+  };
 
-    };
+  try {
+    await fetch("https://docs.google.com/spreadsheets/d/1LTyvF6SIV2rXCByPPuSsyMob2o33DeVeODag-64pvL8/edit?usp=sharing", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
-    try{
-        let res= await fetch("",{
-            method:"POST",
-            mode: "no-cors",
-            body: JSON.stringify(data),
-            headers:{
-                "Content-Type":"application/json"
-
-            }
-        });
-        if (res.ok) {
-            status1.textContent = "Отправлено";
-            form.reset();
-
-        }else{
-            status1.textContent = "Ошибка отправки";
-        }
-    }   catch (err){
-        console.log(err);
-    };
+    status1.textContent = "Отправлено!";
+    form.reset();
+  } catch (err) {
+    console.log(err);
+    status1.textContent = "Ошибка отправки";
+  }
 });
 
 
