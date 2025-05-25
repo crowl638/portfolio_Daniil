@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Змейка</title>
+
+</head>
+<body>
+
+    <canvas id="game"></canvas>
+    
+    <script>
+        let canvas = document.getElementById("game");
+        let ctx = canvas.getContext("2d");
+
+        canvas.width = 400;
+        canvas.height = 400;
+
+        box = 20;
+        snake = [{x:5*box, y:5*box}];
+
+        food = [{x:Math.floor(Math.random()*(canvas.width/box))*box,
+            y:Math.floor(Math.random()*(canvas.height/box))*box
+        }];
+
+        let dir = "RIGHT";
+
+        document.addEventListener("keydown", (e)=>{
+            if (e.key === "ArrowLeft" && dir !=="RIGHT") dir = "LEFT";
+            if (e.key === "ArrowRight" && dir !=="LEFT") dir = "RIGHT";
+            if (e.key === "ArrowUp" && dir !=="DOWN") dir = "UP";
+            if (e.key === "ArrowDown" && dir !=="UP") dir = "DOWN";
+        })
+
+        function draw(){
+            ctx.fillstyle = "#f5f5dc";
+            ctx.fillRect(0,0,canvas.width,canvas.height);
+            
+            for (let i=0; i<snake.width;i++){
+                ctx.fillstyle = (i==0) ? "green":"lime";
+                ctx.fillRect(snake[i].x, snake[i].y,box,box);    
+            }
+
+            ctx.fillstyle = "red";
+            ctx.fillRect(food.x,food.y,box,box);
+
+            let headX = snake[0].x;
+            let headY = snake[0].y;
+
+            if (dir="RIGHT") headX+=box;
+            if (dir="LEFT") heaxX-=box;
+            if (dir="UP") headY-=box;
+            if (dir="DOWN") headY +=box;
+
+        }
+
+        let game = setInterval(draw,150);
+
+    </script>
+</body>
+</html>
